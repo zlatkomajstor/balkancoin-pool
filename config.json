@@ -1,8 +1,8 @@
 {
-    "coin": "dashcoin",
-    "symbol": "DSH",
+    "coin": "karbowanec",
+    "symbol": "KRB",
     "coinUnits": 1000000000000,
-    "coinDifficultyTarget": 120,
+    "coinDifficultyTarget": 240,
 
     "logging": {
         "files": {
@@ -19,8 +19,9 @@
     "poolServer": {
         "enabled": true,
         "clusterForks": "auto",
-        "poolAddress": "D6WLtrV1SBWV8HWQzQv8uuYuGy3uwZ8ah5iT5HovSqhTKMauquoTsKP8RBJzVqVesX87poYWQgkGWB4NWHJ6Ravv93v4BaE",
+        "poolAddress": "KhnW3G3drtQSN6cUGMKgvJZwctb9dir21CGrcaSxEzmh8mm8RakMooQjeEZ6wVMXwkLm2GqM965ovVnKg3hFCCMYTxYUP8H",
         "blockRefreshInterval": 1000,
+		"addressSeparator": ".",
         "minerTimeout": 900,
         "ports": [
             {
@@ -40,7 +41,7 @@
             },
             {
                 "port": 8888,
-                "difficulty": 10000,
+                "difficulty": 50000,
                 "desc": "Hidden port",
                 "hidden": true
             }
@@ -82,10 +83,10 @@
         "interval": 600,
         "maxAddresses": 50,
         "mixin": 3,
-        "transferFee": 50000000,
-        "minPayment": 1000000000,
+        "transferFee": 100000000,
+        "minPayment": 500000000000,
         "maxTransactionAmount": 0,
-        "denomination": 1000000000
+        "denomination": 100000000000
     },
 
     "blockUnlocker": {
@@ -93,9 +94,9 @@
         "interval": 30,
         "depth": 10,
         "poolFee": 2,
-        "devDonation": 0.1,
+        "devDonation": 0.0,
         "coreDevDonation": 0.1,
-        "extraFeaturesDevDonation":0.1
+        "extraFeaturesDevDonation":0.0
     },
 
     "api": {
@@ -110,12 +111,12 @@
 
     "daemon": {
         "host": "127.0.0.1",
-        "port": 42081
+        "port": 32348
     },
 
     "wallet": {
         "host": "127.0.0.1",
-        "port": 8082
+        "port": 19977
     },
 
     "redis": {
