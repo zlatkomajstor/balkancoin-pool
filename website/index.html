@@ -199,6 +199,117 @@
         return row;
     }
 
+    function getRigByIpRowElement(rigByIp, jsonString) {
+
+        var row = document.createElement('tr');
+        row.setAttribute('data-json', jsonString);
+        row.setAttribute('id', 'rigByIpRow' + rigByIp.ip);
+
+        row.innerHTML = getRigByIpCells(rigByIp);
+
+        return row;
+    }
+
+    function getRigByNameRowElement(rigByName, jsonString) {
+
+        var row = document.createElement('tr');
+        row.setAttribute('data-json', jsonString);
+        row.setAttribute('id', 'rigByNameRow' + rigByName.name);
+
+        row.innerHTML = getRigByNameCells(rigByName);
+
+        return row;
+    }
+
+    function renderStatsByIp(statsRigByIp){
+        var $rigByIpRows = $('#rig_stat_by_ip_rows');
+
+        $rigByIpRows.children().filter(function() { return $(this).data('refreshed') == "y"; }).each(function() { 
+            $(this).data('refreshed', 'n');
+        });
+
+        if (statsRigByIp !== undefined) {
+            for (var i = 0; i < statsRigByIp.length; ++i) {
+                var rigByIp = statsRigByIp[i];
+                var rigByIpJson = JSON.stringify(rigByIp);
+                var existingRow = document.getElementById('rigByIpRow' + rigByIp.ip);
+
+                if (existingRow && existingRow.getAttribute('data-json') !== rigByIpJson) {
+                    $(existingRow).replaceWith(getRigByIpRowElement(rigByIp, rigByIpJson));
+                }
+                else if (!existingRow) {
+                    var rigByIpElement = getRigByIpRowElement(rigByIp, rigByIpJson);
+                    $rigByIpRows.append(rigByIpElement);
+                }
+
+                existingRow = document.getElementById('rigByIpRow' + rigByIp.ip);
+                $(existingRow).data('refreshed', 'y');
+
+                if (rigByIp.status !== 'OK') {
+                    $(existingRow).addClass('rigError').removeClass('rigOk');
+                }
+                else {
+                    $(existingRow).addClass('rigOk').removeClass('rigError');
+                }
+            }
+        }
+
+        $rigByIpRows.children().filter(function() { return $(this).data('refreshed') == "n"; }).each(function() { 
+            var data = $(this).data('json');
+            data.status = 'Not responded';
+            data.hashrate = '';
+            data.hashes = '';
+            var rigByIpJson = JSON.stringify(data);
+            var row = getRigByIpRowElement(data, rigByIpJson);
+            $(row).addClass('rigError').removeClass('rigOk');
+            $(this).replaceWith(row);
+        });
+    }
+
+    function renderStatsByName(statsRigByName){
+        var $rigByNameRows = $('#rig_stat_by_name_rows');
+
+        $rigByNameRows.children().filter(function() { return $(this).data('refreshed') == "y"; }).each(function() { 
+            $(this).data('refreshed', 'n');
+        });
+
+        if (statsRigByName !== undefined) {
+            for (var i = 0; i < statsRigByName.length; ++i) {
+                var rigByName = statsRigByName[i];
+                var rigByNameJson = JSON.stringify(rigByName);
+                var existingRow = document.getElementById('rigByNameRow' + rigByName.name);
+
+                if (existingRow && existingRow.getAttribute('data-json') !== rigByNameJson) {
+                    $(existingRow).replaceWith(getRigByNameRowElement(rigByName, rigByNameJson));
+                }
+                else if (!existingRow) {
+                    var rigByNameElement = getRigByNameRowElement(rigByName, rigByNameJson);
+                    $rigByNameRows.append(rigByNameElement);
+                }
+
+                existingRow = document.getElementById('rigByNameRow' + rigByName.name);
+                $(existingRow).data('refreshed', 'y');
+
+                if (rigByName.status !== 'OK') {
+                    $(existingRow).addClass('rigError').removeClass('rigOk');
+                }
+                else {
+                    $(existingRow).addClass('rigOk').removeClass('rigError');
+                }
+            }
+        }
+
+        $rigByNameRows.children().filter(function() { return $(this).data('refreshed') == "n"; }).each(function() { 
+            var data = $(this).data('json');
+            data.status = 'Not responded';
+            data.hashrate = '';
+            data.hashes = '';
+            var rigByNameJson = JSON.stringify(data);
+            var row = getRigByNameRowElement(data, rigByNameJson);
+            $(row).addClass('rigError').removeClass('rigOk');
+            $(this).replaceWith(row);
+        });
+    }
 
     function parsePayment(time, serializedPayment){
         var parts = serializedPayment.split(':');

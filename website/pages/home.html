@@ -272,6 +272,50 @@
     </div>
     
 
+    <h4 class="yourStats">Detailed stats by RIG name</h4>
+    <div class="yourStats detailedStats table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th><i class="fa"></i> RIG</th>
+                <th><i class="fa"></i> Difficulty</th>
+                <th><i class="fa"></i> Hashrate</th>
+                <th><i class="fa"></i> Hashes</th>
+                <th><i class="fa"></i> Accepted</th>
+                <th><i class="fa"></i> Expired</th>
+                <th><i class="fa"></i> Bad</th>
+                <th><i class="fa"></i> Last seen</th>
+                <th><i class="fa"></i> Status</th>
+            </tr>
+            </thead>
+            <tbody id="rig_stat_by_name_rows">
+
+            </tbody>
+        </table>
+    </div>
+
+    <h4 class="yourStats">Detailed stats by IP</h4>
+    <div class="yourStats detailedStats table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th><i class="fa"></i> IP</th>
+                <th><i class="fa"></i> Difficulty</th>
+                <th><i class="fa"></i> Hashrate</th>
+                <th><i class="fa"></i> Hashes</th>
+                <th><i class="fa"></i> Accepted</th>
+                <th><i class="fa"></i> Expired</th>
+                <th><i class="fa"></i> Bad</th>
+                <th><i class="fa"></i> Last seen</th>
+                <th><i class="fa"></i> Status</th>
+            </tr>
+            </thead>
+            <tbody id="rig_stat_by_ip_rows">
+
+            </tbody>
+        </table>
+    </div>
+
     <br class="yourStats">
 
     <h4 class="yourStats">Payments</h4>
@@ -454,6 +498,32 @@
 
     /* Stats by mining address lookup */
 
+    function getRigByIpCells(rigByIp) {
+        return '<td>' + rigByIp.ip + '</td>' +
+                '<td>' + rigByIp.difficulty + '</td>' +
+                '<td>' + rigByIp.hashrate + '</td>' +
+                '<td>' + rigByIp.hashes + '</td>' +
+                '<td>' + rigByIp.accepted + '</td>' +
+                '<td>' + rigByIp.expired + '</td>' +
+                '<td>' + rigByIp.bad + '</td>' +
+                '<td>' + (rigByIp.lastSeen ? new Date(parseInt(rigByIp.lastSeen) * 1000).toLocaleString() : '') + '</td>' +
+                '<td class="' + (rigByIp.status === 'OK'? 'rigOk' : 'rigError') + '">' + rigByIp.status + '</td>'
+        ;
+    }
+
+    function getRigByNameCells(rigByName) {
+        return '<td>' + rigByName.name + '</td>' +
+                '<td>' + rigByName.difficulty + '</td>' +
+                '<td>' + rigByName.hashrate + '</td>' +
+                '<td>' + rigByName.hashes + '</td>' +
+                '<td>' + rigByName.accepted + '</td>' +
+                '<td>' + rigByName.expired + '</td>' +
+                '<td>' + rigByName.bad + '</td>' +
+                '<td>' + (rigByName.lastSeen ? new Date(parseInt(rigByName.lastSeen) * 1000).toLocaleString() : '') + '</td>' +
+                '<td class="' + (rigByName.status === 'OK'? 'rigOk' : 'rigError') + '">' + rigByName.status + '</td>'
+        ;
+    }
+
     function getPaymentCells(payment){
         return '<td>' + formatDate(payment.time) + '</td>' +
                 '<td>' + formatPaymentLink(payment.hash) + '</td>' +
@@ -475,6 +545,8 @@
         $('#addressError').hide();
         $('.yourStats').hide();
         $('#payments_rows').empty();
+        $('#rig_stat_by_ip_rows').empty();
+        $('#rig_stat_by_name_rows').empty();
 
         $('#lookUp > span:first-child').hide();
         $('#lookUp > span:last-child').show();
@@ -522,6 +594,25 @@
                     updateText('yourPaid', getReadableCoins(data.stats.paid));
                     updateText('yourPendingBalance', getReadableCoins(data.stats.balance));
 
+                    if (data.workersDetailed && data.workersDetailed.ip) {
+                        renderStatsByIp(data.workersDetailed.ip);
+                    }
+                    else {
+                        renderStatsByIp(undefined);
+                    }
+
+                    if (data.workersDetailed && data.workersDetailed.name) {
+                        var detailedStatByRigName = data.workersDetailed.name;
+
+                        detailedStatByRigName.sort(function(a, b) {
+                            return a.name.localeCompare(b.name);
+                        });
+                        renderStatsByName(detailedStatByRigName);
+                    }
+                    else {
+                        renderStatsByName(undefined);
+                    }
+                    
                     renderPayments(data.payments);
 
                     $('.yourStats').show(function(){

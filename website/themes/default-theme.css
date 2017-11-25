@@ -220,4 +220,15 @@ a.list-group-item.active:focus {
   color: #fff;
   background-color: #03a678;
 }
-
+.detailedStats tr.rigError {
+  background-color: #ffdddd;
+  color: black;
+}
+.detailedStats td.rigError {
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+}
+.detailedStats td.rigOk {
+  color: green;
+}

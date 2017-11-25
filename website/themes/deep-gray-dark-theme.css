@@ -245,3 +245,14 @@ a.list-group-item.active:focus {
 .nav-pills > li.active > a:focus {
   background-color: #6d6d6d;
 }
+.detailedStats tr.rigError {
+  background-color: #ffdddd;
+}
+.detailedStats td.rigError {
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+}
+.detailedStats td.rigOk {
+  color: green;
+}
