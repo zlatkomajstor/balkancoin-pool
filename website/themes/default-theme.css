@@ -1,15 +1,15 @@
 a {
-  color: #03a678;
+  color: #c69c6c;
 }
 a:hover {
-  color: #025b42;
+  color: #fbb03b;
 }
 body {
   line-height: 1.428571429;
-  color: #6f6e6e;  
+  color: #fbb03b;
 }
 .navbar-inverse {
-  background-color: #2D5768;
+  background-color: #c20000;
   border-color: #f9f9f8;
 }
 .navbar-inverse .container {
@@ -38,7 +38,7 @@ body {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #03a678;
+  background-color: #c69c6c;
 }
 #stats_updated {
   color: #F4FC3D;
@@ -47,31 +47,31 @@ hr {
   border-top-color: #BBBBBB;
 }
 .stats > div:not(#addressError) {
-  color: #7C7C7C;
+  color: #c69c6c;
 }
 .stats > div:not(#addressError) > i.fa {
-  color: #03a678; 
+  color: #c69c6c; 
 }
 .stats > div:not(#addressError) > span:not(.input-group-btn):first-of-type {  
-  color: #336A80;
+  color: #c69c6c;
 }
 .form-control {
-  border: 1px solid #03a678;  
+  border: 1px solid #fbb03b;  
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .form-control:focus {  
-  border-color: #027454;
+  border-color: #c69c6c;
 }
 .input-group-addon {
-  background-color: #03a678;
+  background-color: #c69c6c;
   color: #fff;
-  border-color: #03a678;
+  border-color: #fbb03b;
 }
 .btn-default {
   color: #ffffff;
-  background-color: #03a678;
-  border-color: #03a678;
+  background-color: #c69c6c;
+  border-color: #fbb03b;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -79,8 +79,8 @@ hr {
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   color: #ffffff;
-  background-color: #027454;
-  border-color: #026a4d;
+  background-color: #fbb03b;
+  border-color: #fbb03b;
 }
 .btn-default:active,
 .btn-default.active,
@@ -114,10 +114,10 @@ code {
   background-color: #FDECF1;
 }
 .bg-primary {
-  background-color: #03a678;
+  background-color: #fbb03b;
 }
 .bg-info {
-  background-color: #336A80;
+  background-color: #c69c6c;
   color: #fff;
 }
 .table > thead > tr > td.success,
@@ -142,8 +142,8 @@ code {
   background-color: #dbebff;
 }
 .table > thead > tr > th {
-  color: #336A80;
-  border-bottom-color: #336A80;
+  color: #c69c6c;
+  border-bottom-color: #c69c6c;
 }
 .table > tbody > tr > td {
   border-top-color: #c9e0e9;
