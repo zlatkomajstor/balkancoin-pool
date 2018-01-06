@@ -38,7 +38,7 @@ h3,
   margin-bottom: 14px;
 }
 .navbar-inverse {
-  background-color: #2D5768;
+  background-color: #a42024;
   border-color: #f9f9f8;
   border-width: 0;
 }
@@ -46,7 +46,7 @@ h3,
   background-color: rgba(0, 0, 0, 0);
 }
 .navbar-inverse .navbar-brand {
-  color: #fff;
+  color: #adb2ac;
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
@@ -57,7 +57,7 @@ h3,
   color: #CEE3E4;
 }
 .navbar-inverse .navbar-nav > li > a {
-  color: #F0F9FA;
+  color: #adb2ac;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
@@ -209,11 +209,18 @@ code {
   color: #336A80;
   border-bottom-color: #336A80;
 }
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #536261;
+}
+
+
 .table > tbody > tr > td {
-  border-top-color: #c9e0e9;
+  border-top-color: #c69c6c;
 }
 footer {
-  background-color: #FDFDFD;
+  background-color: #a42024;
 }
 /************************************************
 *** charts ***

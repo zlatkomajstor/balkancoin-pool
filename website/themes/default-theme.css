@@ -7,16 +7,17 @@ a:hover {
 body {
   line-height: 1.428571429;
   color: #fbb03b;
+  background-color: #232b30;
 }
 .navbar-inverse {
-  background-color: #c20000;
+  background-color: #a42024;
   border-color: #f9f9f8;
 }
 .navbar-inverse .container {
   background-color: rgba(0, 0, 0, 0);
 }
 .navbar-inverse .navbar-brand {
-  color: #fff;
+  color: #adb2ac;
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
@@ -27,7 +28,7 @@ body {
   color: #CEE3E4;
 }
 .navbar-inverse .navbar-nav > li > a {
-  color: #F0F9FA;
+  color: #adb2ac;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
@@ -38,13 +39,13 @@ body {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #c69c6c;
+  background-color: #a42024;
 }
 #stats_updated {
   color: #F4FC3D;
 }
 hr {
-  border-top-color: #BBBBBB;
+  border-top-color: #c69c6c;
 }
 .stats > div:not(#addressError) {
   color: #c69c6c;
@@ -132,7 +133,7 @@ code {
 .table > thead > tr.success > th,
 .table > tbody > tr.success > th,
 .table > tfoot > tr.success > th {
-  background-color: #f4f9ff;
+  background-color: #536261;
 }
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover,
@@ -146,10 +147,10 @@ code {
   border-bottom-color: #c69c6c;
 }
 .table > tbody > tr > td {
-  border-top-color: #c9e0e9;
+  border-top-color: #c69c6c;
 }
 footer {
-  background-color: #FDFDFD;
+  background-color: #a42024;
 }
 .btn-primary {
   color: #ffffff;
