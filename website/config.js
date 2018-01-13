@@ -1,6 +1,6 @@
 var api = "http://us2.mininggood.com:8147";
 
-var api_blockexplorer = "http://us5.balkancoin.org:38777";
+var api_blockexplorer = "http://explorer.balkancoin.org:38777";
 
 var poolHost = "us2.mininggood.com";
 
