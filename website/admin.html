@@ -35,6 +35,8 @@
 		padding-top: 65px;
 		padding-bottom: 80px;
 		overflow-y: scroll;
+		color: #fbb03b;
+    	background-color: #232b30;
 	}
 
 	.navbar {
@@ -127,7 +129,7 @@
 			hashrate = hashrate / 1000;
 			i++;
 		}
-		return parseInt(hashrate).toFixed(2) + byteUnits;
+		return hashrate.toFixed(2) + byteUnits[i];
 	}
 
 	window.onhashchange = function() {

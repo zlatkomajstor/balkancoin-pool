@@ -1,8 +1,8 @@
 {
-    "coin": "karbowanec",
-    "symbol": "KRB",
-    "coinUnits": 1000000000000,
-    "coinDifficultyTarget": 240,
+    "coin": "balkancoin",
+    "symbol": "BKC",
+    "coinUnits": 100000000,
+    "coinDifficultyTarget": 30,
 
     "logging": {
         "files": {
@@ -18,29 +18,29 @@
 
     "poolServer": {
         "enabled": true,
-        "clusterForks": "auto",
-        "poolAddress": "KhnW3G3drtQSN6cUGMKgvJZwctb9dir21CGrcaSxEzmh8mm8RakMooQjeEZ6wVMXwkLm2GqM965ovVnKg3hFCCMYTxYUP8H",
+        "clusterForks": 1,
+        "poolAddress": "POOL_WALLET_ADDRESS",
         "blockRefreshInterval": 1000,
 		"addressSeparator": ".",
         "minerTimeout": 900,
         "ports": [
             {
-                "port": 3333,
+                "port": 3363,
                 "difficulty": 100,
                 "desc": "Low end hardware"
             },
             {
-                "port": 5555,
+                "port": 5585,
                 "difficulty": 2000,
                 "desc": "Mid range hardware"
             },
             {
-                "port": 7777,
+                "port": 7817,
                 "difficulty": 10000,
                 "desc": "High end hardware"
             },
             {
-                "port": 8888,
+                "port": 8918,
                 "difficulty": 50000,
                 "desc": "Hidden port",
                 "hidden": true
@@ -48,7 +48,7 @@
         ],
         "varDiff": {
             "minDiff": 100,
-            "maxDiff": 200000,
+            "maxDiff": 10000,
             "targetTime": 100,
             "retargetTime": 30,
             "variancePercent": 30,
@@ -73,50 +73,50 @@
         },
         "slushMining": {
             "enabled": false,
-            "weight": 120,
+            "weight": 30,
             "lastBlockCheckRate": 1
         }
     },
 
     "payments": {
         "enabled": true,
-        "interval": 600,
-        "maxAddresses": 50,
-        "mixin": 3,
-        "transferFee": 100000000,
-        "minPayment": 500000000000,
+        "interval": 240,
+        "maxAddresses": 10,
+        "mixin": 0,
+        "transferFee": 100000,
+        "minPayment": 50000000,
         "maxTransactionAmount": 0,
-        "denomination": 100000000000
+        "denomination": 100000
     },
 
     "blockUnlocker": {
         "enabled": true,
         "interval": 30,
         "depth": 10,
-        "poolFee": 2,
-        "devDonation": 0.0,
-        "coreDevDonation": 0.1,
-        "extraFeaturesDevDonation":0.0
+        "poolFee": 0.4,
+        "devDonation": 0.1,
+        "coreDevDonation": 0,
+        "extraFeaturesDevDonation":0
     },
 
     "api": {
         "enabled": true,
         "hashrateWindow": 600,
         "updateInterval": 5,
-        "port": 8117,
+        "port": 8147,
         "blocks": 30,
         "payments": 30,
-        "password": "your_password"
+        "password": "ADMIN_PASSWORD"
     },
 
     "daemon": {
         "host": "127.0.0.1",
-        "port": 32348
+        "port": 38777
     },
 
     "wallet": {
         "host": "127.0.0.1",
-        "port": 19977
+        "port": 8100
     },
 
     "redis": {

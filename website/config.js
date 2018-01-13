@@ -20,6 +20,7 @@ var themeCss = "themes/default-theme.css";
 
 var networkStat = {
     "bkc": [
-        ["bkc.mininggood.com", "http://us2.mininggood.com:8147"]
+    	["pool.balkancoin.org", "http://miner.balkancoin.org:8147"],
+    	["bkc.mininggood.com", "http://us2.mininggood.com:8147"]
     ]
 };

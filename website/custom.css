@@ -5,10 +5,10 @@
   display: none;
 }
 a {
-  color: #03a678;
+  color: #c69c6c;
 }
 a:hover {
-  color: #025b42;
+  color: #fbb03b;
 }
 body {
   font-size: 14px;
@@ -206,8 +206,8 @@ code {
   background-color: #dbebff;
 }
 .table > thead > tr > th {
-  color: #336A80;
-  border-bottom-color: #336A80;
+  color: #c69c6c;
+  border-bottom-color: #c69c6c;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td,
@@ -332,13 +332,22 @@ fieldset[disabled] .btn-primary.active {
 }
 a.list-group-item {
   font-size: 1.1em;
+  background-color: #a42024;
+  border-color: #a42024;
+  color: #adb2ac;
 }
 a.list-group-item.active,
 a.list-group-item.active:hover,
 a.list-group-item.active:focus {
   color: #ffffff;
-  background-color: #03a678;
-  border-color: #03a678;
+  background-color: #a42024;
+  border-color: #a42024;
+}
+a.list-group-item:hover, a.list-group-item:focus {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #a42024;
+    border-color: #a42024;
 }
 a.list-group-item:first-child {
   border-top-right-radius: 0;
@@ -354,7 +363,7 @@ a.list-group-item:last-child {
   position: relative;
   -webkit-box-shadow: inset 0px 0px 0 1px #ffffff;
   box-shadow: inset 0px 0px 0 1px #ffffff;
-  background-color: #EBEBEB;
+  background-color: #232b30;
 }
 .adminStats .statValue {
   position: absolute;
@@ -368,10 +377,12 @@ a.list-group-item:last-child {
   text-align: center;
   word-wrap: break-word;
   font-size: 17px;
+  color: #c69c6c;
 }
 .adminStats .statValue.lead {
   font-size: 21px;
   font-weight: 600;
+  color: #fbb03b;
 }
 .adminStats h4 {
   text-align: right;
@@ -380,7 +391,7 @@ a.list-group-item:last-child {
   bottom: 10px;
   right: 15px;
   margin: 0;
-  color: #26839B;
+  color: #fbb03b;
 }
 .adminStats .statsTitle h3 {
   line-height: 127px;
