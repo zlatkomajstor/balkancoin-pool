@@ -12,9 +12,9 @@ var cryptonatorWidget = ["{symbol}-BTC", "{symbol}-USD", "{symbol}-EUR"];
 
 var easyminerDownload = "https://github.com/zone117x/cryptonote-easy-miner/releases/";
 
-var blockchainExplorer = "http://explorer.balkancoin.org/?hash={id}#blockchain_block";
+var blockchainExplorer = "/?hash={id}#blockchain_block";
 
-var transactionExplorer = "http://explorer.balkancoin.org/?hash={id}#blockchain_transaction";
+var transactionExplorer = "/?hash={id}#blockchain_transaction";
 
 var themeCss = "themes/default-theme.css";
 
