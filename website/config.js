@@ -23,6 +23,7 @@ var networkStat = {
     	["pool.balkancoin.org", "http://miner.balkancoin.org:8147"],
     	["bkc.mininggood.com", "http://us2.mininggood.com:8147"],
       ["youpool.io/BKC", "http://118.178.122.224:8118"],
-      ["npool.pw/bkc", "http://bkc.npool.pw:10040"]
+      ["npool.pw/bkc", "http://bkc.npool.pw:10040"],
+      ["balkan.poolfun.ru", "http://bkc.poolfun.ru:8147"]
     ]
 };
