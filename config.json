@@ -21,7 +21,7 @@
         "clusterForks": "auto",
         "poolAddress": "KhnW3G3drtQSN6cUGMKgvJZwctb9dir21CGrcaSxEzmh8mm8RakMooQjeEZ6wVMXwkLm2GqM965ovVnKg3hFCCMYTxYUP8H",
         "blockRefreshInterval": 1000,
-		"addressSeparator": ".",
+        "addressSeparator": ".",
         "minerTimeout": 900,
         "ports": [
             {
