@@ -21,7 +21,7 @@
         "clusterForks": 1,
         "poolAddress": "POOL_WALLET_ADDRESS",
         "blockRefreshInterval": 1000,
-		"addressSeparator": ".",
+        "addressSeparator": ".",
         "minerTimeout": 900,
         "ports": [
             {
