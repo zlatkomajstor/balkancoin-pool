@@ -1,12 +1,12 @@
-var api = "http://us2.mininggood.com:8147";
+var api = "http://miner.balkancoin.org:8147";
 
 var api_blockexplorer = "http://explorer.balkancoin.org:38777";
 
-var poolHost = "us2.mininggood.com";
+var poolHost = "miner.balkancoin.org";
 
 var irc = "irc.freenode.net/#poolhost";
 
-var email = "admin@mininggood.com";
+var email = "admin@balkancoin.org";
 
 var cryptonatorWidget = ["{symbol}-BTC", "{symbol}-USD", "{symbol}-EUR"];
 
@@ -21,9 +21,7 @@ var themeCss = "themes/default-theme.css";
 var networkStat = {
     "bkc": [
     	["pool.balkancoin.org", "http://miner.balkancoin.org:8147"],
-    	["bkc.mininggood.com", "http://us2.mininggood.com:8147"],
-      ["youpool.io/BKC", "http://118.178.122.224:8118"],
-      ["npool.pw/bkc", "https://api.npool.pw/bkc"],
-      ["balkan.poolfun.ru", "http://bkc.poolfun.ru:8147"]
+    	["pool2.balkancoin.org", "http://miner2.balkancoin.org:8147"],
+      ["npool.pw/bkc", "https://api.npool.pw/bkc"]
     ]
 };
