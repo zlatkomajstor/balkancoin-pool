@@ -20,8 +20,6 @@ var themeCss = "themes/default-theme.css";
 
 var networkStat = {
     "bkc": [
-    	["pool.balkancoin.org", "http://miner.balkancoin.org:8147"],
-    	["pool2.balkancoin.org", "http://miner2.balkancoin.org:8147"],
-      ["bkc.go-mine.it", "https://bkc.go-mine.it/api/pool/stats"]
+    	["pool.balkancoin.org", "http://miner.balkancoin.org:8147"]
     ]
 };
